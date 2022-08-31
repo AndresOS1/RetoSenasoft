@@ -18,8 +18,7 @@ class ProveedorController extends Controller
     {
         
         $proveedores = Proveedore::all();
-
-        return view('Proveedor.index', compact('proveedores'));
+        return view('proveedor.index', compact('proveedores'));
     }
 
     /**

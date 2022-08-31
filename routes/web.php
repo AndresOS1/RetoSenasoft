@@ -17,13 +17,16 @@ use App\Http\Controllers\PedidoController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/d',function(){
+    return view('layouts.dashboard');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Route::get('/proveedor.index', [ProveedorController::class,'index'])->name('proveedor.index');
+Route::get('/proveedor.create', [ProveedorController::class,'create'])->name('proveedor.create');
 Route::post('/proveedor.store', [ProveedorController::class,'store'])->name('proveedor.store');
 Route::get('/proveedoredit/{id}', [ProveedorController::class,'edit'])->name('proveedoredit');
 Route::post('/proveedorupdate/{id}', [ProveedorController::class,'update'])->name('proveedorupdate');
