@@ -13,7 +13,7 @@ class Articulo extends Model
     protected $primaryKey = "id_articulo";
 
 
-    protected $fillable = ['user_id','existencias','precio','descripcion'];
+    protected $fillable = ['proveedor_id','existencias','precio','descripcion'];
 
     protected $hidden = ['id_articulo'];
 }
